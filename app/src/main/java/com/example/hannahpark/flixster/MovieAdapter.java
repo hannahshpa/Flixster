@@ -39,6 +39,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
         this.config = config;
     }
 
+
     //creates and inflates a new view
     @NonNull
     @Override
@@ -102,6 +103,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
         ImageView ivBackdropImage;
         TextView tvTitle;
         TextView tvOverview;
+        TextView date;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -110,6 +112,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             ivBackdropImage = (ImageView) itemView.findViewById(R.id.ivBackdropImage);
             tvTitle = (TextView) itemView.findViewById(R.id.tvTitle);
             tvOverview = (TextView) itemView.findViewById(R.id.tvOverview);
+            date = (TextView) itemView.findViewById(R.id.date);
             itemView.setOnClickListener(this);
         }
 
@@ -126,6 +129,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
                 Intent intent = new Intent(context, MovieDetailsActivity.class);
                 //serialize the movie using parceler, use its short name as a key
                 intent.putExtra(Movie.class.getSimpleName(), Parcels.wrap(movie));
+
+                intent.putExtra(Config.class.getSimpleName(), Parcels.wrap(config));
+
                 //show the activity
                 context.startActivity(intent);
             }

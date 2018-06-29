@@ -4,41 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#212525"
     tools:context=".MovieDetailsActivity">
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/flicks_backdrop_placeholder" />
 
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/ivImage"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="Movie Title"
         android:textAppearance="@android:style/TextAppearance.Large"
-        android:layout_alignParentLeft = "true"
-        android:layout_alignParentEnd = "true"
-        android:layout_alignParentStart = "true"
-        android:layout_alignParentRight = "true"
-        android:layout_alignParentTop = "true"
-        />
+        android:textColor="#D7F1F8"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/releaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBar"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Release Date:"
+        android:textColor="#A8C1C2" />
 
 
     <RatingBar
         android:id="@+id/ratingBar"
-        android:layout_below="@id/tvTitle"
         style="@style/Widget.AppCompat.RatingBar.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvTitle"
         android:numStars="5"
-        android:stepSize="0.5" />
+        android:layout_marginLeft="10dp"
+        android:stepSize="0.5"
+        android:theme="@style/RatingsBarTheme"
+        android:visibility="visible"
+        tools:isIndicator="true" />
 
     <TextView
         android:id="@+id/tvOverview"
-        android:layout_below="@id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:text="Movie information and synopsis for the overview" />
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/releaseDate"
+        android:layout_marginRight="10dp"
+        android:text="Movie information and synopsis for the overview"
+        android:textColor="#929292" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/releaseDate"
+        android:layout_centerVertical="true"
+        android:fontFamily="sans-serif-condensed"
+        android:text="TextView"
+        android:layout_above="@id/tvOverview"
+        android:textColor="#A8C1C2" />
+
 </RelativeLayout>

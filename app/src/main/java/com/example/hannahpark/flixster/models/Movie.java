@@ -13,6 +13,7 @@ public class Movie {
     String posterPath; //only the path not full url
     String backdropPath;
     Double voteAverage;
+    String date;
 
     // no-arg, empty constructor required for Parceler
     public Movie() {}
@@ -24,6 +25,7 @@ public class Movie {
         posterPath = object.getString("poster_path");
         backdropPath = object.getString("backdrop_path");
         voteAverage = object.getDouble("vote_average");
+        date = object.getString("release_date");
     }
 
     public String getTitle() {
@@ -43,4 +45,8 @@ public class Movie {
     }
 
     public Double getVoteAverage() { return voteAverage; }
+
+    public String getDate() {
+        return date;
+    }
 }

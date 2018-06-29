@@ -3,7 +3,9 @@ package com.example.hannahpark.flixster.models;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
+@Parcel
 //used when getting the movie images
 public class Config {
     //the base url for loading images
@@ -12,6 +14,10 @@ public class Config {
     String posterSize;
     //backdrop size for landscape orientation for fetching images, part of the url
     String backdropSize;
+
+
+    // no-arg, empty constructor required for Parceler
+    public Config() {}
 
     //constructor
     public Config(JSONObject object) throws JSONException {

@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    // application theme for Ratings Bar
+
+    <style name="RatingsBarTheme" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="android:colorControlActivated">#B3AB5A</item>
+        <item name="android:colorControlNormal">#202828</item>
+    </style>
 </resources>

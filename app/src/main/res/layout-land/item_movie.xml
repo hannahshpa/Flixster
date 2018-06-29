@@ -24,7 +24,7 @@
         android:layout_toRightOf="@+id/ivBackdropImage"
         android:text="Movie Title"
         android:textAppearance="@android:style/TextAppearance.Medium"
-        android:textColor="#ffffff"
+        android:textColor="#D7F1F8"
         android:textSize="24sp" />
 
     <TextView
@@ -38,5 +38,5 @@
         android:layout_toRightOf="@+id/ivBackdropImage"
         android:fontFamily="sans-serif-condensed"
         android:text="Movie Overview and Synopsis Information"
-        android:textColor="@android:color/darker_gray" />
+        android:textColor="#929292" />
 </RelativeLayout>
