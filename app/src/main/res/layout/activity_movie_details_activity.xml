@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MovieDetailsActicity">
+    tools:context=".MovieDetailsActivity">
 
     <TextView
         android:id="@+id/tvTitle"
@@ -12,6 +12,33 @@
         android:layout_height="wrap_content"
         android:text="Movie Title"
         android:textAppearance="@android:style/TextAppearance.Large"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_alignParentLeft = "true"
+        android:layout_alignParentEnd = "true"
+        android:layout_alignParentStart = "true"
+        android:layout_alignParentRight = "true"
+        android:layout_alignParentTop = "true"
+        />
+
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_below="@id/tvTitle"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:numStars="5"
+        android:stepSize="0.5" />
+
+    <TextView
+        android:id="@+id/tvOverview"
+        android:layout_below="@id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="Movie information and synopsis for the overview" />
+</RelativeLayout>
