@@ -85,7 +85,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
             Intent intent = new Intent(this, MovieTrailerActivity.class);
             //serialize the movie using parceler, use its short name as a key
-            intent.putExtra(Config.class.getSimpleName(), Parcels.wrap(movie));
+            intent.putExtra(Movie.class.getSimpleName(), Parcels.wrap(movie));
 
             //show the activity
             startActivity(intent);
