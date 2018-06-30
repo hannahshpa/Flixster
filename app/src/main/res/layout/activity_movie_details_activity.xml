@@ -76,4 +76,18 @@
         android:layout_above="@id/tvOverview"
         android:textColor="#A8C1C2" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/tvTitle"
+        android:layout_marginEnd="73dp"
+        android:background="#D7F1F8"
+        android:fontFamily="sans-serif"
+        android:text="Watch Trailer"
+        android:textSize="12sp"
+        android:onClick="onClick"
+        android:textStyle="bold" />
+
 </RelativeLayout>
